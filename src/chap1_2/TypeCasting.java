@@ -40,5 +40,25 @@ public class TypeCasting {
         // 암묵적(묵시적 형 변환 -> upcasting (promotion)
         // 명시적 형 변환 -> downcasting
 
+        // 타입이 다른 데이터끼리의 연산은
+        // 암묵적 형변환에 의해 작은 데이터가 큰 데이터로 변환됨
+        int v = 91;
+        double z = 6.6;
+        double result = v + z;
+
+        int result2 = 'A' + v;
+        System.out.println("result2 = " + result2);
+
+        int h = 5;
+        double result3 = 27 / (double) h; // 27.0 이나 (double)을 붙여 명시적 형변환을 해야 5.4 라는 결과가 나온다
+        System.out.println("result3 = " + result3);
+
+        // int 보다 작은데이터(char, short, byte)들은
+        // 연산결과가 무조건 int다
+        byte b1 = 100;
+        byte b2 = 70;
+        int result4 = b1 + b2;
+
+        System.out.println('A' + 'C');
     }
 }
