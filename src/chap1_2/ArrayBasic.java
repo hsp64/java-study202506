@@ -42,5 +42,52 @@ public class ArrayBasic {
 
         Arrays.stream(numbers).forEach(n -> System.out.println(n));
 
+        // 배열 단축 생성 문법
+//        String[] pets = new String[] {"멍멍이", "야옹이", "짹짹이"};
+
+        // 변수를 선언할 때만 new Type[] 생략 가능
+        String[] pets = {"멍멍이", "야옹이", "짹짹이"};
+        pets = new String[] {"어흥이", "톰톰이"};
+        System.out.println(Arrays.toString(pets));
+
+        foo(new String[] {"하하", "호호"});
+
+        System.out.println("===================");
+
+        /*
+        # 배열의 기본 값
+            자바의 배열은 생성되는 순간 해당 공간에 기본값들을 채워넣음
+            정수형: 0
+            실수형: 0.0
+            논리형: false
+            문자형: ''
+            기타(String): null
+         */
+        byte[] bArr = new byte[3];
+        System.out.println(Arrays.toString(bArr));
+
+        double[] dArr = new double[4];
+        System.out.println(Arrays.toString(dArr));
+
+        boolean[] blArr = new boolean[3];
+        System.out.println(Arrays.toString(blArr));
+
+        char[] cArr = new char[3];
+        System.out.println(Arrays.toString(cArr));
+
+        // 기본타입 (정수, 실수, 논리, 문자-char)
+        // 나머지 참조타입 (주소를 저장하는 변수 - 포인터)
+        String[] sArr = new String[3];
+        System.out.println(Arrays.toString(sArr));
+
+
+
+
+    } // end main
+
+    static void foo(String[] sArr) {
+
     }
+
+
 }
