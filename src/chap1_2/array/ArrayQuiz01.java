@@ -1,6 +1,13 @@
 package chap1_2.array;
 
-/*
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ArrayQuiz01 {
+
+    public static void main(String[] args) {
+
+        /*
             # 음식명을 입력받아서 배열에 순서대로 저장하는 코드
 
             1. 음식명을 입력받는다.
@@ -12,21 +19,28 @@ package chap1_2.array;
             5. 새로운 음식명을 마지막 위치에 추가한다.
          */
 
-import java.util.Scanner;
-
-public class ArrayQuiz01 {
-
-    public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
 
-        String[] foodList = {};
-        String stop = "그만";
+        System.out.println("# 먹고 싶은 음식을 입력하세요!");
+        System.out.println("# 입력을 중지하려면 <그만>이라고 입력하세요.");
 
+        String[] foodList = new String[0];
 
-        System.out.println("음식명을 입력하세요.");
-        String foodName = scanner.next();
+        while (true) {
+            System.out.print(">> ");
+            String foodName = scanner.nextLine();
 
+            if (foodName.equals("그만")) break;
 
+            // 배열에 쌓아줘야 함
+            String[] temp = new String[foodList.length + 1];
+            for (int i = 0; i < foodList.length; i++) {
+                temp[i] = foodList[i];
+            }
+            temp[temp.length - 1] = foodName;
+            foodList = temp;
+            temp = null;
+        } // end while
+        System.out.println("먹고싶은 음식: " + Arrays.toString(foodList));
     }
 }
