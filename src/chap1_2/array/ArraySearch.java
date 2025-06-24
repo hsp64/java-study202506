@@ -1,4 +1,4 @@
-package array;
+package chap1_2.array;
 
 // 배열 탐색 : 선형(순차) 탐색
 public class ArraySearch {
