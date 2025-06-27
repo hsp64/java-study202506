@@ -42,9 +42,12 @@ public class MemberController {
                 System.out.println("\n# 회원 정보를 수정합니다.");
                 break;
             case "5":
+                // 이메일을 입력받고 있으면 패스워드도 입력받아서 삭제
                 System.out.println("\n# 회원 정보를 삭제합니다.");
                 break;
             case "6":
+                // 1.방법 논리적 삭제를 구현 (실제로 배열에 지우는게 아니라 지우는 척함)
+                // 2.방법 배열을 2개 관리함
                 System.out.println("\n# 삭제된 회원 정보를 복구합니다.");
                 break;
             case "7":
