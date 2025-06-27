@@ -7,6 +7,5 @@ public class Run {
 
         MemberController mc = new MemberController();
         mc.start();
-
     }
 }
