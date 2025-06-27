@@ -9,7 +9,7 @@ public class Member {
     String password;
     String memberName;
     String id; // 인조 식별자 (랜덤값: 시스템이 자동생성)
-    Gender gender;
+    Gender gender; // MALE, FEMALE
     int age;
     LocalDateTime registerDate; // 회원가입 일시
 
