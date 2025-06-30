@@ -1,5 +1,5 @@
 package chap1_5.member;
-
+ 
 import java.util.Scanner;
 
 // 역할: 회원관리 앱의 입출력을 담당
