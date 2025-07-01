@@ -11,7 +11,7 @@ public class Main {
 
 //        myCar.model = "페라리 488 스파이더";
         // 기어 변속
-        myCar.setmode("DDD");
-        System.out.println("현재 모드: " + myCar.mode);
+        myCar.setMode("DDD");
+        System.out.println("현재 모드: " + myCar.getMode());
     }
 }
