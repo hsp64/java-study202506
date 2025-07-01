@@ -15,7 +15,7 @@ public class Mage extends Player{
         System.out.println("# 마력: " + this.mana);
     }
 
-    void fireBall() {
+    void fireBall(Player player) {
         System.out.printf("%s님이 파이어볼을 시전합니다.\n", this.nickName);
     }
 }
