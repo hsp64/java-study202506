@@ -9,6 +9,12 @@ public class Hunter extends Player{
         this.concentrate = 100;
     }
 
+    @Override
+    public void showStatus() {
+        super.showStatus();
+        System.out.println("# 집중: " + this.concentrate);
+    }
+
     void multiArrow() {
         System.out.printf("%s님이 점프합니다.\n", this.nickName);
 
