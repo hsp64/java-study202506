@@ -33,6 +33,8 @@ public class Main {
         hunter.attack();
         System.out.println("==========");
 
+        mage.fireBall(warrior);
+
 
     }
 }
