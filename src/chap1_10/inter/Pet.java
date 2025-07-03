@@ -9,4 +9,5 @@ public interface Pet {
     void handle();
     // 예방접종 기능
     boolean inject();
+
 }
