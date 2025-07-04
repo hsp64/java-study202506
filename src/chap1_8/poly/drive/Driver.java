@@ -1,4 +1,4 @@
-package chap1_8.poly.dirve;
+package chap1_8.poly.drive;
 
 // 운전자 (운전 직원)
 public class Driver {

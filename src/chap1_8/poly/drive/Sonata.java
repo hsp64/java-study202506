@@ -1,4 +1,4 @@
-package chap1_8.poly.dirve;
+package chap1_8.poly.drive;
 
 public class Sonata extends Car{
 

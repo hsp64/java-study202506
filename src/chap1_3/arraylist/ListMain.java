@@ -15,5 +15,6 @@ public class ListMain {
 
         System.out.println(foods);
         System.out.println("deleted = " + deleted);
+
     }
 }
