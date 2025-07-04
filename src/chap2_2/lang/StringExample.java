@@ -9,7 +9,7 @@ public class StringExample {
         String str = "hello java";
 
         //charAt(index) : 문자열 인덱스에 따른 글자 반환
-        char c = str.charAt(4);//str[4]
+        char c = str.charAt(4); //str[4]
         System.out.println("c = " + c);
 
         //substring() : 문자열의 특정 범위를 추출
@@ -67,4 +67,5 @@ public class StringExample {
         String[] foodList = food.split(",");
         System.out.println(Arrays.toString(foodList));
     }
+
 }
