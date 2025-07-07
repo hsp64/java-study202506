@@ -42,6 +42,8 @@ public class ArtistController {
                     String exit = InputUtils.prompt(">> ");
                     if (exit.equalsIgnoreCase("y")) {
                         System.exit(0);
+                    } else if (exit.contentEquals("ㅛ")) {
+                        System.exit(0);
                     } else {
                         System.out.println("# 종료를 취소합니다.");
                     }
@@ -55,4 +57,34 @@ public class ArtistController {
         }
 
     } // end start()
+
+    private void addArtistProcess() {
+        System.out.println("\n# 노래 등록을 시작합니다.");
+        String artistName = InputUtils.prompt("- 가수명: ");
+        String songTitle = InputUtils.prompt("- 노래 제목: ");
+
+        repository.addArtist(artistName, songTitle);
+        System.out.printf("# [%s]의 노래 [%s]이(가) 등록되었습니다.\n", artistName, songTitle);
+    }
+
+    private void searchProcess() {
+        String artistName = InputUtils.prompt("\n- 검색할 가수명: ");
+        Artist artist = repository.search(artistName);
+
+        if (artist != null) {
+            System.out.printf("# %s님의 노래 목록:\n", artist.getArtistName());
+            for (String song : artist.getSongList()) {
+                System.out.println("- " + song);
+            }
+        } else {
+            System.out.println("# 해당 가수는 등록되어 있지 않습니다.");
+        }
+    }
+
+    private void showAllArtist() {
+        System.out.println("\n# 전체 등록된 가수 목록:");
+        for (Artist artist : repository.findAll()) {
+            System.out.printf("- %s: 총 %d곡\n", artist.getArtistName(), artist.getSongList().size());
+        }
+    }
 }
