@@ -1,7 +1,5 @@
 package chap1_8.poly.drive;
 
-import chap1_8.poly.dirve.*;
-
 public class Main {
 
     public static void main(String[] args) {
