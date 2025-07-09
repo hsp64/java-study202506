@@ -101,7 +101,7 @@ public class Mapping {
                 .getAsDouble();
 
         System.out.println("averageCalories = " + averageCalories);
-        
+
     }
     
 }
