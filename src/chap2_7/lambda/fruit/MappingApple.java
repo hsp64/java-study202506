@@ -32,4 +32,15 @@ public class MappingApple {
         }
         return mappedList;
     }
+
+    // 사과목록에서 사과의 특정 데이터만 추출
+    public static <X, Y> List<Y> map(List<X> list, GenericFunction<X, Y> func) {
+        List<Y> mappedList = new ArrayList<>();
+
+        for (X x : list) {
+            Y mappedData = func.apply(x);
+            mappedList.add(mappedData);
+        }
+        return mappedList;
+    }
 }
